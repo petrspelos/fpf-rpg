@@ -15,10 +15,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-red.min.css">
 
-
-        <!-- Internal Style -->
-        <link href="css/main.css" type="text/css" rel="Stylesheet"/>
-        <link href="css/progress.css" type="text/css" rel="Stylesheet"/>
+        <style>
+          body {
+              background-color: #eee;
+              padding: 0px;
+          }
+        </style>
     </head>
     <!--
       ===========================================================================
@@ -45,110 +47,116 @@
                                           PAGE CONTENT
                     ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
                   -->
-                   <!--
-                                  TASK LIST
-                    -->
-                    <ul class="task-list mdl-list">
-                        <!-- TASK 5 -->
-                        <li class="mdl-list__item mdl-list__item--three-line">
-                            <span class="mdl-list__item-primary-content">
-                          <i class="material-icons mdl-list__item-avatar">code</i>
-                          <span>[S] for Security</span>
-                            <span class="mdl-list__item-text-body">
-                            Captcha při registraci - Login tokeny - odhlášní ze všech zařízení
-                          </span>
+                  <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--1-col"></div>
+                    <div class="mdl-cell mdl-cell--10-col">
+                                        <!--
+                                    TASK LIST
+                      -->
+                      <ul class="task-list mdl-list">
+                          <!-- TASK 5 -->
+                          <li class="mdl-list__item mdl-list__item--three-line">
+                              <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-avatar">code</i>
+                            <span>[S] for Security</span>
+                              <span class="mdl-list__item-text-body">
+                              Captcha při registraci - Login tokeny - odhlášní ze všech zařízení
                             </span>
-                            <span class="mdl-list__item-secondary-content">
-                          
-                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" disabled>
-                          </label>
-                        </span>
-                        </li>
-                        <!-- TASK END -->
-                        <!-- TASK 4 -->
-                        <li class="mdl-list__item mdl-list__item--three-line">
-                            <span class="mdl-list__item-primary-content">
-                          <i class="material-icons mdl-list__item-avatar">code</i>
-                          <span>Meat! Meat! MEAT! MORE PIG! <b>MORE PIG!</b></span>
-                            <span class="mdl-list__item-text-body">
-                            Registrace + Přihlašování
+                              </span>
+                              <span class="mdl-list__item-secondary-content">
+                            
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
+                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" disabled>
+                            </label>
                           </span>
+                          </li>
+                          <!-- TASK END -->
+                          <!-- TASK 4 -->
+                          <li class="mdl-list__item mdl-list__item--three-line">
+                              <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-avatar">code</i>
+                            <span>Meat! Meat! MEAT! MORE PIG! <b>MORE PIG!</b></span>
+                              <span class="mdl-list__item-text-body">
+                              Registrace + Přihlašování
                             </span>
-                            <span class="mdl-list__item-secondary-content">
-                          
-                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" disabled>
-                          </label>
-                        </span>
-                        </li>
-                        <!-- TASK END -->
-                        <!-- TASK 3 -->
-                        <li class="mdl-list__item mdl-list__item--three-line">
-                            <span class="mdl-list__item-primary-content">
-                          <i class="material-icons mdl-list__item-avatar">code</i>
-                          <span>One page to rule them all</span>
-                            <span class="mdl-list__item-text-body">
-                            Připravit MVC (model, view, controller) architekturu pro jednotlivé stránky.
+                              </span>
+                              <span class="mdl-list__item-secondary-content">
+                            
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
+                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" disabled>
+                            </label>
                           </span>
+                          </li>
+                          <!-- TASK END -->
+                          <!-- TASK 3 -->
+                          <li class="mdl-list__item mdl-list__item--three-line">
+                              <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-avatar">code</i>
+                            <span>One page to rule them all</span>
+                              <span class="mdl-list__item-text-body">
+                              Připravit MVC (model, view, controller) architekturu pro jednotlivé stránky.
                             </span>
-                            <span class="mdl-list__item-secondary-content">
-                          
-                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
-                          </label>
-                        </span>
-                        </li>
-                        <!-- TASK END -->
-                        <!-- TASK 2 -->
-                        <li class="mdl-list__item mdl-list__item--three-line">
-                            <span class="mdl-list__item-primary-content">
-                          <i class="material-icons mdl-list__item-avatar">code</i>
-                          <span>Welcome to the game</span>
-                            <span class="mdl-list__item-text-body">
-                            Nastavit připojení k databázi, vytvořit abstrakci pro databázové příkazy.
+                              </span>
+                              <span class="mdl-list__item-secondary-content">
+                            
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
+                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
+                            </label>
                           </span>
+                          </li>
+                          <!-- TASK END -->
+                          <!-- TASK 2 -->
+                          <li class="mdl-list__item mdl-list__item--three-line">
+                              <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-avatar">code</i>
+                            <span>Welcome to the game</span>
+                              <span class="mdl-list__item-text-body">
+                              Nastavit připojení k databázi, vytvořit abstrakci pro databázové příkazy.
                             </span>
-                            <span class="mdl-list__item-secondary-content">
-                          
-                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
-                          </label>
-                        </span>
-                        </li>
-                        <!-- TASK END -->
-                        <!-- TASK 1 -->
-                        <li class="mdl-list__item mdl-list__item--three-line">
-                            <span class="mdl-list__item-primary-content">
-                          <i class="material-icons mdl-list__item-avatar">code</i>
-                          <span>První krok</span>
-                            <span class="mdl-list__item-text-body">
-                            Propojení s FTP, Git repozitář, nahrání index stránky.
+                              </span>
+                              <span class="mdl-list__item-secondary-content">
+                            
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
+                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
+                            </label>
                           </span>
+                          </li>
+                          <!-- TASK END -->
+                          <!-- TASK 1 -->
+                          <li class="mdl-list__item mdl-list__item--three-line">
+                              <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-avatar">code</i>
+                            <span>První krok</span>
+                              <span class="mdl-list__item-text-body">
+                              Propojení s FTP, Git repozitář, nahrání index stránky.
                             </span>
-                            <span class="mdl-list__item-secondary-content">
-                          
-                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
-                          </label>
-                        </span>
-                        </li>
-                        <!-- TASK END -->
-                    </ul>
-                    <!--
-                                  NAVIGATION BUTTONS
-                    -->
-                    <div class="task-list">
-                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>
-                      Příhlásit se
-                      </button>
-                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>
-                      Registrovat se
-                      </button>
-                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled onclick="goTo('alpha.php')">
-                      Spustit <?php echo GAME_VERSION;?> (vývojářská verze)
-                      </button>
+                              </span>
+                              <span class="mdl-list__item-secondary-content">
+                            
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
+                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
+                            </label>
+                          </span>
+                          </li>
+                          <!-- TASK END -->
+                      </ul>
+                      <!--
+                                    NAVIGATION BUTTONS
+                      -->
+                      <div class="task-list">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>
+                        Příhlásit se
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>
+                        Registrovat se
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled onclick="goTo('alpha.php')">
+                        Spustit <?php echo GAME_VERSION;?> (vývojářská verze)
+                        </button>
+                      </div>
                     </div>
+                    <div class="mdl-cell mdl-cell--1-col"></div>
+                  </div>
                 </div>
             </main>
         </div>

@@ -12,5 +12,4 @@
       require_once './controllers/'.$class_name.'.php';
     }
   }
-
 ?>
