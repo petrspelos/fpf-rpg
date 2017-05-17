@@ -27,6 +27,11 @@
             left: 0;
             z-index: 9999;
           }
+
+          .passDiff{
+              color: red;
+              visibility: hidden;
+          }
         </style>
 
         <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -68,12 +73,12 @@
                                 <br>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input name="userpassword" class="mdl-textfield__input" type="password" id="password">
-                                    <label class="mdl-textfield__label" for="password">Heslo</label>
+                                    <label class="mdl-textfield__label" for="password">Heslo <span class="passDiff" id="passDiff1">(Hesla se neshodují)</span></label>
                                 </div>
                                 <br>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input name="userpassword2" class="mdl-textfield__input" type="password" id="password">
-                                    <label class="mdl-textfield__label" for="password">Heslo znovu</label>
+                                    <input name="userpassword2" class="mdl-textfield__input" type="password" id="password2">
+                                    <label class="mdl-textfield__label" for="password">Heslo znovu <span class="passDiff" id="passDiff2">(Hesla se neshodují)</span></label>
                                 </div>
                                 <br>
                                 <div class="g-recaptcha" data-sitekey="6LcLoiEUAAAAAMKVs2-t-TK6appVV9JC_GjjLKdY"></div>
@@ -110,6 +115,7 @@
                                 <button type="button" class="mdl-button close mdl-js-button mdl-js-ripple-effect mdl-button--accent">Rozumím</button>
                                 </div>
                             </dialog>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                             <script>
                                 var dialog = document.querySelector('dialog');
                                 var showDialogButton = document.querySelector('#show-dialog');
@@ -138,6 +144,39 @@
                             {
                                 window.location.replace("landing-page?act=reg");
                             }
+
+                            // Real time client-sided text validation
+                            $('#password').on('input',function(e){
+                                ValidatePasswords();
+                            });
+
+                            $('#password2').on('input',function(e){
+                                ValidatePasswords();
+                            });
+
+                            function ValidatePasswords()
+                            {
+                                pass1 = $('#password').val();
+                                pass2 = $('#password2').val();
+                                if(pass1 != "" && pass2 != "")
+                                {
+                                    if(pass1 !== pass2)
+                                    {
+                                        $('#passDiff1').css('visibility', 'visible');
+                                        $('#passDiff2').css('visibility', 'visible');
+                                    }
+                                    else
+                                    {
+                                        $('#passDiff1').css('visibility', 'hidden');
+                                        $('#passDiff2').css('visibility', 'hidden');
+                                    }
+                                }
+                                else
+                                {
+                                    $('#passDiff1').css('visibility', 'hidden');
+                                    $('#passDiff2').css('visibility', 'hidden');
+                                }
+                            }
                             </script>
 
                             <!-- DEV END -->
@@ -149,7 +188,6 @@
             </main>
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
         <script>
         function goTo(link)
