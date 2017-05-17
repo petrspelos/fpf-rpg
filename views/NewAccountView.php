@@ -160,34 +160,6 @@
                            </div>
                         </div>
 
-                     <!-- DEV TEST SHIT -->
-                     <dialog class="mdl-dialog">
-                        <h4 class="mdl-dialog__title">Whops!</h4>
-                        <div class="mdl-dialog__content">
-                           <p>
-                           <ul class="mdl-list">
-                              <li class="mdl-list__item" id="usernameError">
-                                 <span class="mdl-list__item-primary-content">
-                                 Neplatné uživatelské jméno
-                                 </span>
-                              </li>
-                              <li class="mdl-list__item" id="passwordError">
-                                 <span class="mdl-list__item-primary-content">
-                                 Vaše hesla se neshodují
-                                 </span>
-                              </li>
-                              <li class="mdl-list__item" id="captchaError">
-                                 <span class="mdl-list__item-primary-content">
-                                 CAPTCHA nebyl správně vyplněn
-                                 </span>
-                              </li>
-                           </ul>
-                           </p>
-                        </div>
-                        <div class="mdl-dialog__actions">
-                           <button type="button" class="mdl-button close mdl-js-button mdl-js-ripple-effect mdl-button--accent">Rozumím</button>
-                        </div>
-                     </dialog>
                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                      <script>
                         var dialog = document.querySelector('dialog');
