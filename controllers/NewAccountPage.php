@@ -24,6 +24,7 @@
             $valid[] = false;
             $valid[] = false;
             $valid[] = false;
+            $mistakes = array();
 
             // Check if username is valid
             if(strlen($username) > 0 && strlen($username) <= 32)
@@ -33,12 +34,24 @@
                 {
                     $valid[0] = true;
                 }
+                else
+                {
+                    $mistakes[] = "Uživatel $username již existuje.";
+                }
+            }
+            else
+            {
+                $mistakes[] = "Uživatelské jméno musí mít alespoň jeden znak a méně než 32 (včetně).";
             }
 
             // Check if passwords match
             if($password == $password2 && strlen($password) > 0 && strlen($password) <= 30)
             {
                 $valid[1] = true;
+            }
+            else
+            {
+                $mistakes[] = "Vámi zadaná hesla se neshodují.";
             }
 
             if(!ISDEBUG)
@@ -49,6 +62,10 @@
                 if ($res['success'])
                 {
                     $valid[2] = true;
+                }
+                else
+                {
+                    $mistakes[] = "CAPTCHA nebyl úspěšně vyplněn.";
                 }
             }
             else
@@ -67,7 +84,13 @@
                 {
                     $valid[$i] = ($valid[$i]) ? 'true' : 'false';
                 }
-                echo "<script>$( document ).ready(function() {RegistrationFeedback(".$valid[0].", ".$valid[1].", ".$valid[2].");});</script>";
+
+                echo "<script>ClearFeedback();</script>";
+                foreach($mistakes as $mistake)
+                {
+                    echo "<script>AddFeedbackMessage('$mistake');</script>";
+                }
+                echo "<script>DisplayFeedback();</script>";
             }
         }
 
