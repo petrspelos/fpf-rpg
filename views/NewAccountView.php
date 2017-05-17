@@ -12,20 +12,53 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-red.min.css">
       <style>
-         body {
-         background-color: #eee;
-         padding: 0px;
-         }
-         .dev{
-         position: fixed;
-         bottom: 0;
-         left: 0;
-         z-index: 9999;
-         }
-         .passDiff{
-         color: red;
-         visibility: hidden;
-         }
+        body {
+        background-color: #eee;
+        padding: 0px;
+        }
+        .dev{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        }
+        .passDiff{
+        color: red;
+        visibility: hidden;
+        }
+        .form-card.mdl-card {
+        width: 100%;
+        background: #FFF;
+        }
+        .form-card > .mdl-card__actions {
+        border-color: rgba(0, 0, 0, 0.2);
+        }
+        .form-card > .mdl-card__actions {
+        display: flex;
+        box-sizing:border-box;
+        align-items: center;
+        }
+        .form-card > .mdl-card__actions > .material-icons {
+        padding-right: 10px;
+        }
+        .form-card > .mdl-card__supporting-text > div {
+        display: block;
+        margin: auto;
+        }
+        .hint{
+        font-size: 12px;
+        color: #AAA;
+        }
+        .g-recaptcha{
+        width: 304px;   
+        }
+        .feedback-card{
+        width: 100%;
+        margin-top: 10px;
+        }
+        #feedback-card{
+            visibility: hidden;
+        }
       </style>
       <script src='https://www.google.com/recaptcha/api.js'></script>
    </head>
@@ -52,50 +85,6 @@
                                         PAGE CONTENT
                   ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
                   -->
-               <style>
-                  .form-card.mdl-card {
-                  width: 100%;
-                  background: #FFF;
-                  }
-                  .form-card > .mdl-card__actions {
-                  border-color: rgba(0, 0, 0, 0.2);
-                  }
-                  .form-card > .mdl-card__actions {
-                  display: flex;
-                  box-sizing:border-box;
-                  align-items: center;
-                  }
-                  .form-card > .mdl-card__actions > .material-icons {
-                  padding-right: 10px;
-                  }
-
-                  .mdl-textfield {
-                      
-                  }
-
-                  .form-card > .mdl-card__supporting-text > div {
-                      display: block;
-                    margin: auto;
-                  }
-
-                  .hint{
-                      font-size: 12px;
-                      color: #AAA;
-                  }
-
-                  .g-recaptcha{
-                      width: 304px;   
-                  }
-
-                  .feedback-card{
-                    width: 100%;
-                    margin-top: 10px;
-                  }
-
-                  #feedback-card{
-                      visibility: hidden;
-                  }
-               </style>
                <div class="mdl-grid">
                   <div class="mdl-cell mdl-cell--4-col"></div>
                   <div class="mdl-cell mdl-cell--4-col">
@@ -162,38 +151,27 @@
 
                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                      <script>                        
-                    
-                    function ClearFeedback()
-                    {
+                    function ClearFeedback() {
                         $('#feedback-card').empty();
                     }
 
-                    function AddFeedbackMessage(message)
-                    {
+                    function AddFeedbackMessage(message) {
                         $('#feedback-card').append('<li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">error_outline</i>' + message + '</span></li>');
                     }
 
-                    function DisplayFeedback()
-                    {
+                    function DisplayFeedback() {
                         $('#feedback-card').css('visibility', 'visible');
                     }
-                        
-                        function RegistrationSuccess()
-                        {
+
+                    function RegistrationSuccess() {
                         window.location.replace("landing-page?act=reg");
-                        }
+                    }
                         
-                        // Real time client-sided text validation
-                        $('#password').on('input',function(e){
-                        ValidatePasswords();
-                        });
+                    // Real time client-sided password validation
+                    $('#password').on('input',ValidatePasswords);
+                    $('#password2').on('input',ValidatePasswords);
                         
-                        $('#password2').on('input',function(e){
-                        ValidatePasswords();
-                        });
-                        
-                        function ValidatePasswords()
-                        {
+                    function ValidatePasswords() {
                         pass1 = $('#password').val();
                         pass2 = $('#password2').val();
                         if(pass1 != "" && pass2 != "")
@@ -214,7 +192,11 @@
                             $('#passDiff1').css('visibility', 'hidden');
                             $('#passDiff2').css('visibility', 'hidden');
                         }
-                        }
+                    }
+
+                    function goTo(link) {
+                        window.location = link;
+                    }
                      </script>
                      <!-- DEV END -->
                   </div>
@@ -225,11 +207,5 @@
          </main>
       </div>
       <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-      <script>
-         function goTo(link)
-         {
-           window.location = link;
-         }
-      </script>
    </body>
 </html>
