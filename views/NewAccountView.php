@@ -161,29 +161,7 @@
                         </div>
 
                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                     <script>
-                        var dialog = document.querySelector('dialog');
-                        var showDialogButton = document.querySelector('#show-dialog');
-                        if (! dialog.showModal) {
-                            dialogPolyfill.registerDialog(dialog);
-                        }
-                        
-                        dialog.querySelector('.close').addEventListener('click', function() {
-                        dialog.close();
-                        });
-                        
-                        function RegistrationFeedback(nameIsValid, passwordIsValid, captchaIsValid)
-                        {
-                        nameIsValid = (!nameIsValid) ? "visible" : "hidden";
-                        passwordIsValid = (!passwordIsValid) ? "visible" : "hidden";
-                        captchaIsValid = (!captchaIsValid) ? "visible" : "hidden";
-                        
-                        $("#usernameError").css("visibility", nameIsValid);
-                        $("#passwordError").css("visibility", passwordIsValid);
-                        $("#captchaError").css("visibility", captchaIsValid);
-                        
-                        dialog.showModal();
-                    }
+                     <script>                        
                     
                     function ClearFeedback()
                     {
