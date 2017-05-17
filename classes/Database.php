@@ -3,7 +3,7 @@
     class Database {
 
         private static function connect(){
-            $pdo = new PDO('mysql:host=localhost;dbname=fpfrpg', DB_USERNAME, DB_PASSWORD);
+            $pdo = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME, DB_USERNAME, DB_PASSWORD);
             return $pdo;
         }
         

@@ -58,9 +58,9 @@
                           <li class="mdl-list__item mdl-list__item--three-line">
                               <span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-avatar">code</i>
-                            <span>[S] for Security</span>
+                            <span>Come on! Get in!</span>
                               <span class="mdl-list__item-text-body">
-                              Captcha při registraci - Login tokeny - odhlášní ze všech zařízení
+                              Přihlašování, přihlašovací tokeny, varování před cookies.
                             </span>
                               </span>
                               <span class="mdl-list__item-secondary-content">
@@ -77,13 +77,13 @@
                             <i class="material-icons mdl-list__item-avatar">code</i>
                             <span>Meat! Meat! MEAT! MORE PIG! <b>MORE PIG!</b></span>
                               <span class="mdl-list__item-text-body">
-                              Registrace + Přihlašování
+                              Registrace + CAPTCHA
                             </span>
                               </span>
                               <span class="mdl-list__item-secondary-content">
                             
                             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" disabled>
+                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
                             </label>
                           </span>
                           </li>
@@ -147,13 +147,26 @@
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>
                         Příhlásit se
                         </button>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="goTo('create-account');">
                         Registrovat se
                         </button>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled onclick="goTo('alpha.php')">
-                        Spustit <?php echo GAME_VERSION;?> (vývojářská verze)
-                        </button>
                       </div>
+                      <!--
+                                  SNACKBAR SETUP
+                        -->
+                        <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+                          <div class="mdl-snackbar__text"></div>
+                          <button class="mdl-snackbar__action" type="button"></button>
+                        </div>
+                        <script>
+                        function ShowSnackbar(message)
+                        {
+                          var snackbarContainer = document.querySelector('#demo-toast-example');
+                          var data = {message: message};
+                          snackbarContainer.MaterialSnackbar.showSnackbar(data);
+                        }
+                        </script>
+                        <!-- SNACKBAR END -->
                     </div>
                     <div class="mdl-cell mdl-cell--1-col"></div>
                   </div>
@@ -161,7 +174,7 @@
             </main>
         </div>
 
-        <script src="js/jQuery/jQuery.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
         <script>
         function goTo(link)
