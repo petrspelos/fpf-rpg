@@ -11,7 +11,7 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
         <!-- Material Design -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-red.min.css">
 
@@ -46,10 +46,21 @@
                     ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
                                           PAGE CONTENT
                     ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
-                  -->
+                  -->                  
                   <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--1-col"></div>
                     <div class="mdl-cell mdl-cell--10-col">
+                      <!--
+                                    NAVIGATION BUTTONS
+                      -->
+                      <div class="task-list">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="goTo('login');">
+                        Příhlásit se
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="goTo('create-account');">
+                        Registrovat se
+                        </button>
+                      </div>
                                         <!--
                                     TASK LIST
                       -->
@@ -140,17 +151,7 @@
                           </li>
                           <!-- TASK END -->
                       </ul>
-                      <!--
-                                    NAVIGATION BUTTONS
-                      -->
-                      <div class="task-list">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>
-                        Příhlásit se
-                        </button>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="goTo('create-account');">
-                        Registrovat se
-                        </button>
-                      </div>
+                      
                       <!--
                                   SNACKBAR SETUP
                         -->

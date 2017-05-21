@@ -1,22 +1,19 @@
 <?php
-
     class NewAccountPage extends Controller{
-        public static function test(){
-            $result = self::query("SELECT * FROM users");
-        }
-
-        public static function LoadExecute(){
-            echo "<div class='dev'><p>";
+        public static function LoadExecute() {
+            if(self::isLoggedIn())
+            {
+                echo "<script>goTo('home')</script>";
+                die();
+            }
 
             if(isset($_POST['registerForm']))
             {
                 self::ValidateRegistration();
             }
-
-            echo "</p></div>";
         }
 
-        public static function ValidateRegistration(){
+        public static function ValidateRegistration() {
             $username = $_POST['username'];
             $password = $_POST['userpassword'];
             $password2 = $_POST['userpassword2'];

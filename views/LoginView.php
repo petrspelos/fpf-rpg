@@ -1,3 +1,11 @@
+<?php
+
+    if(isset($_POST['loginForm']))
+    {
+        Login::LoginUser($_POST['username'], $_POST['userpassword']);
+    }
+
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -75,7 +83,7 @@
          <header class="mdl-layout__header mdl-layout__header--scroll">
             <div class="mdl-layout__header-row">
                <!-- Title -->
-               <span class="mdl-layout-title"><i class="material-icons">accessibility</i><sup> Tvorba nového účtu</sup></span>
+               <span class="mdl-layout-title"><i class="material-icons">accessibility</i><sup> Přihlášení</sup></span>
             </div>
          </header>
          <main class="mdl-layout__content">
@@ -103,20 +111,12 @@
                                  <input name="userpassword" class="mdl-textfield__input" type="password" id="password">
                                  <label class="mdl-textfield__label" for="password">Heslo <span class="passDiff" id="passDiff1">(Hesla se neshodují)</span></label>
                               </div>
-                              <br>
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                 <input name="userpassword2" class="mdl-textfield__input" type="password" id="password2">
-                                 <label class="mdl-textfield__label" for="password">Heslo znovu <span class="passDiff" id="passDiff2">(Hesla se neshodují)</span></label>
-                              </div>
-                              <br>
-                              <div class="g-recaptcha" data-sitekey="6LcLoiEUAAAAAMKVs2-t-TK6appVV9JC_GjjLKdY"></div>
-                              <br>
                               <!-- CARD CONTENT END -->
                            </div>
                            <div class="mdl-card__actions mdl-card--border">
-                              <a class="hint" href="login">Již máte účet?</a>
+                              <a class="hint" href="create-account">Vytvořit účet</a>
                               <div class="mdl-layout-spacer"></div>
-                              <input name="registerForm" type="submit" value="Registrovat" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                              <input name="loginForm" type="submit" value="Přihlásit se" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                            </div>
                         </div>
                      </form>
@@ -163,39 +163,19 @@
                         $('#feedback-card').css('visibility', 'visible');
                     }
 
-                    function RegistrationSuccess() {
-                        window.location.replace("landing-page?act=reg");
+                    function LoginSuccess() {
+                        window.location.replace("landing-page");
                     }
-                        
-                    // Real time client-sided password validation
-                    $('#password').on('input',ValidatePasswords);
-                    $('#password2').on('input',ValidatePasswords);
-                        
-                    function ValidatePasswords() {
-                        pass1 = $('#password').val();
-                        pass2 = $('#password2').val();
-                        if(pass1 != "" && pass2 != "")
-                        {
-                            if(pass1 !== pass2)
-                            {
-                                $('#passDiff1').css('visibility', 'visible');
-                                $('#passDiff2').css('visibility', 'visible');
-                            }
-                            else
-                            {
-                                $('#passDiff1').css('visibility', 'hidden');
-                                $('#passDiff2').css('visibility', 'hidden');
-                            }
-                        }
-                        else
-                        {
-                            $('#passDiff1').css('visibility', 'hidden');
-                            $('#passDiff2').css('visibility', 'hidden');
-                        }
-                    }
-
+                    
                     function goTo(link) {
                         window.location = link;
+                    }
+
+                    if(typeof error != 'undefined')
+                    {
+                        ClearFeedback();
+                        AddFeedbackMessage('Nesprávné uživatelské jméno, nebo heslo.');
+                        DisplayFeedback();
                     }
                      </script>
                      <!-- DEV END -->

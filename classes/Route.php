@@ -16,6 +16,23 @@
 
 
         }
+
+        public static function finalize(){
+            $site = $_GET['url'];
+            $valid = false;
+            foreach(self::$validRoutes as $route)
+            {
+                if($site == $route)
+                {
+                    $valid = true;
+                }
+            }
+            if(!$valid)
+            {
+                header("Location: 404");
+                die();
+            }
+        }
     }
 
 ?>

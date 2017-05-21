@@ -1,5 +1,9 @@
 <?php
 
+    Route::set('404', function(){
+        ERR404::CreateView('404View');
+    });
+    
     Route::set('index.php', function(){
         LandingPage::CreateView('LandingPageView');
     });
@@ -12,4 +16,17 @@
         NewAccountPage::CreateView('NewAccountView');
     });
 
+    Route::set('login', function(){
+        Login::CreateView('LoginView');
+    });
+
+    Route::set('home', function(){
+        Home::CreateView('HomeView');
+    });
+
+    Route::set('logout', function(){
+        Logout::CreateView('LogoutView');
+    });
+
+    Route::finalize();
 ?>
