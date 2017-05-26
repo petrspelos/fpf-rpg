@@ -47,7 +47,6 @@
 
 <body>
     <?php echo "<script>var gameVersion = '".GAME_VERSION."';</script>";?>
-
         <!-- Simple header with fixed tabs. -->
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
             mdl-layout--fixed-tabs">
@@ -76,7 +75,7 @@
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--1-col"></div>
                             <div class="mdl-cell mdl-cell--3-col">
-                              <img src="http://beachbutlerz.com/wp-content/uploads/2015/02/placeholder-woman-220x220.png" class="profile-image" id="profileIMG">   
+                              <img src="" class="profile-image" id="profileIMG">   
                               <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="change-photo-btn"><i class="material-icons">photo</i></button>
                               <div class="mdl-tooltip" for="change-photo-btn">Změnit profilový obrázek</div>
                             </div>
@@ -96,7 +95,7 @@
                                     <div class="mdl-tooltip" for="kred-label">
                                     Kredity získáváte za splněné předměty. Jejich počet nejvíce ovlivní Vaše finální skóre.
                                     </div>
-                                    <td>0</td>
+                                    <td id="cval">0</td>
                                     <td>-</td>
                                     <td><button class="mdl-button mdl-js-button mdl-button--raised" disabled>Vylepšit</button></td>
                                   </tr>
@@ -105,7 +104,7 @@
                                     <div class="mdl-tooltip" for="money-label">
                                     Nejsou reálné. Za peníze si můžete koupit celou řadu předmětů, které Vám mohou nejrůzněji pomoci. Peníze získáte prací.
                                     </div>
-                                    <td>0 CZK</td>
+                                    <td id="mval">0 CZK</td>
                                     <td>-</td>
                                     <td><button class="mdl-button mdl-js-button mdl-button--raised" disabled>Vylepšit</button></td>
                                   </tr>
@@ -114,18 +113,18 @@
                                     <div class="mdl-tooltip" for="health-label">
                                     ...
                                     </div>
-                                    <td>0%</td>
-                                    <td>0 CZK / 0%</td>
-                                    <td><button class="mdl-button mdl-js-button mdl-button--raised">Vylepšit</button></td>
+                                    <td id="hval">0%</td>
+                                    <td id="hcval">0 CZK / 0%</td>
+                                    <td><button class="mdl-button mdl-js-button mdl-button--raised" disabled>Vylepšit</button></td>
                                   </tr>
                                   <tr>
                                     <td class="mdl-data-table__cell--non-numeric" id="sanity-label">Zdravý rozum</td>
                                     <div class="mdl-tooltip" for="sanity-label">
                                     ...
                                     </div>
-                                    <td>0%</td>
-                                    <td>0 CZK / 0%</td>
-                                    <td><button class="mdl-button mdl-js-button mdl-button--raised">Vylepšit</button></td>
+                                    <td id="sval">0%</td>
+                                    <td id="scval">0 CZK / 0%</td>
+                                    <td><button class="mdl-button mdl-js-button mdl-button--raised" disabled>Vylepšit</button></td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -181,6 +180,17 @@
           function UpdateUI(){
             $("#usernameTabTitle").html(username);
           }
+
+          function LoadGameValues(c,m,h,s,a,sc,hc){
+            $('#profileIMG').attr('src', a);
+            $('#cval').html(c);
+            $('#mval').html(m + ' CZK');
+            $('#hval').html(h + '%');
+            $('#sval').html(s + '%');
+            $('#hcval').html(hc + ' CZK / 100%');
+            $('#scval').html(sc + ' CZK / 100%');
+          }
+
         </script>
 </body>
 
