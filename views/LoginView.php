@@ -82,6 +82,12 @@
       <div class="mdl-layout mdl-js-layout">
          <header class="mdl-layout__header mdl-layout__header--scroll">
             <div class="mdl-layout__header-row">
+               
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="landing-page">Domů</a>
+                </nav>
+
                <!-- Title -->
                <span class="mdl-layout-title"><i class="material-icons">accessibility</i><sup> Přihlášení</sup></span>
             </div>

@@ -1,8 +1,8 @@
 <?php
     define('GAME_VERSION', '0.0.5.0');
     
-    define('ISDEBUG', false);
-    define('S', true);
+    define('ISDEBUG', true);
+    define('S', false);
 
     if(!ISDEBUG && !S)
     {

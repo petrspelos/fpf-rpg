@@ -56,6 +56,10 @@
         width: 100%;
         margin-top: 10px;
         }
+        .centered-text{
+            width: 100%;
+            text-align: center;
+        }
         #feedback-card{
             visibility: hidden;
         }
@@ -74,6 +78,11 @@
       <div class="mdl-layout mdl-js-layout">
          <header class="mdl-layout__header mdl-layout__header--scroll">
             <div class="mdl-layout__header-row">
+            <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="landing-page">Domů</a>
+                </nav>
+
                <!-- Title -->
                <span class="mdl-layout-title"><i class="material-icons">accessibility</i><sup> Tvorba nového účtu</sup></span>
             </div>
@@ -111,6 +120,8 @@
                               <br>
                               <div class="g-recaptcha" data-sitekey="6LcLoiEUAAAAAMKVs2-t-TK6appVV9JC_GjjLKdY"></div>
                               <br>
+                              <p class="centered-text">Registrací vyjadřujete souhlas s ukládáním a čtením HTTP Cookies. <a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank">Více informací</a>.</p>
+                              <p class="centered-text">Zároveň svou registrací vyjadřujete souhlas s <br><a href="tos" target="_blank">Licenčními podmínkami &amp; podmínkami pro ochranu osobních údajů</a>.<br>(odkazy se otevírají v nové záložce)</p>
                               <!-- CARD CONTENT END -->
                            </div>
                            <div class="mdl-card__actions mdl-card--border">

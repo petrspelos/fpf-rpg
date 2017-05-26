@@ -28,5 +28,9 @@
         Logout::CreateView('LogoutView');
     });
 
+    Route::set('tos', function(){
+        TosPage::CreateView('TosView');
+    });
+
     Route::finalize();
 ?>
