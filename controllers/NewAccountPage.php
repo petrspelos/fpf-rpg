@@ -24,8 +24,9 @@
             $mistakes = array();
 
             // Check if username is valid
-            if(strlen($username) > 0 && strlen($username) <= 32)
+            if(strlen($username) >= 3 && strlen($username) <= 32 && !preg_match("/[^a-z0-9]/", $username))
             {
+                $username = strtolower($username);
                 $result = self::query("SELECT * FROM users WHERE username=:username", array(':username'=>$username));
                 if(empty($result))
                 {
@@ -38,7 +39,7 @@
             }
             else
             {
-                $mistakes[] = "Uživatelské jméno musí mít alespoň jeden znak a méně než 32 (včetně).";
+                $mistakes[] = "Uživatelské jméno musí být mezi 3 a 32 znaky a může obsahovat pouze písmena anglické abecedy a čísla.";
             }
 
             // Check if passwords match
