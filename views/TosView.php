@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -54,15 +54,15 @@
 
   <!-- PETI, VŠECHNO AŽ DOLŮ MŮŽEŠ PŘELOŽIT. DÍKY, GG -->
   <ul>
-    <li>We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.</li>
-    <li>Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.</li>
-    <li>We will collect and use personal information solely for fulfilling those purposes specified by us and for other ancillary purposes, unless we obtain the consent of the individual concerned or as required by law.</li>
-    <li>Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.</li>
-    <li>We will protect personal information by using reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.</li>
-    <li>We will make readily available to customers information about our policies and practices relating to the management of personal information.</li>
-    <li>We will only retain personal information for as long as necessary for the fulfilment of those purposes.</li>
+    <li>Osobní údaje budeme shromažďovat zákonnými a spravedlivými prostředky, případně s vědomím nebo souhlasem dané osoby.</li>
+    <li>Před nebo po dobu shromažďování osobních údajů zjistíme, za jakým účelem se shromažďují informace.</li>
+    <li>Osobní údaje, které shromažďujeme, použijeme výhradně k plnění účelů, které jsme určili a také pro další doplňkové účely. S výjímkou, že nezískáme souhlas dotyčné osoby nebo jinak zákonem požadované.</li>
+    <li>Osobní údaje by měly být relevantní pro účely, pro které mají být používány, v rozsahu nezbytném pro tyto účely by měly být přesné, úplné a aktuální.</li>
+    <li>Osobní údaje budeme chránit pomocí přiměřených bezpečnostních opatření proti ztrátě nebo krádeži, stejně jako neoprávněným přístupem, zveřejněním, kopírováním, používáním či úpravou.</li>
+    <li>Zákazníkům zpřístupníme veškeré informace o našich zásadách a postupech, které se týkají správy osobních údajů.</li>
+    <li>Osobní údaje uchováváme pouze tak dlouho, dokud jsou nezbytné pro uskutečnění jejich účelu.</li>
   </ul>
 
-  <p>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. PiturAndPitur may change this privacy policy from time to time at PiturAndPitur's sole discretion.</p>
+  <p>Je v našem zájmu podnikat v souladu s těmito zásadami, abychom zajistili ochranu a zachování důvěrnosti osobních údajů. P&P může tyto zásady ochrany osobních údajů čas od času změnit na základě vlastního uvážení společnosti P&P.</p>
   </body>
   </html>
