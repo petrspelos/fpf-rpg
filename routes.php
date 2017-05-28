@@ -32,5 +32,9 @@
         TosPage::CreateView('TosView');
     });
 
+    Route::set('profile', function(){
+        ProfilePage::CreateView('ProfileView');
+    });
+
     Route::finalize();
 ?>
