@@ -1,3 +1,17 @@
+<?php
+
+    if((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+            || $_SERVER['SERVER_PORT'] == 443 || ISDEBUG)
+    {
+        echo "<script>console.log('THIS SITE IS SECURE');</script>";
+    }
+    else
+    {
+        header('Location: https://' . $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI']);
+        die();
+    }
+
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -140,19 +154,19 @@
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
                                     <i class="material-icons mdl-list__item-icon">error_outline</i>
-                                    Bryan Cranston
+                                    
                                 </span>
                                 </li>
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
                                     <i class="material-icons mdl-list__item-icon">error_outline</i>
-                                    Aaron Paul
+                                    
                                 </span>
                                 </li>
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
                                     <i class="material-icons mdl-list__item-icon">error_outline</i>
-                                    Bob Odenkirk
+                                    
                                 </span>
                                 </li>
                                 </ul>

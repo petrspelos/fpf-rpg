@@ -5,6 +5,17 @@
         Login::LoginUser($_POST['username'], $_POST['userpassword']);
     }
 
+    if((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+            || $_SERVER['SERVER_PORT'] == 443 || ISDEBUG)
+    {
+        echo "<script>console.log('THIS SITE IS SECURE');</script>";
+    }
+    else
+    {
+        header('Location: https://' . $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI']);
+        die();
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
