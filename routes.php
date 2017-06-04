@@ -36,5 +36,9 @@
         ProfilePage::CreateView('ProfileView');
     });
 
+    Route::set('settings', function(){
+        Settings::CreateView('SettingsView');
+    });
+
     Route::finalize();
 ?>

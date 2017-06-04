@@ -1,5 +1,6 @@
 <?php
     define('GAME_VERSION', '0.0.5.0');
+    define('WORK_REWARD', 60);
     
     define('ISDEBUG', true);
     define('S', false);

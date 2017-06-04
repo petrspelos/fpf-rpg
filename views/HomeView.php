@@ -4,6 +4,13 @@
       header('Location: landing-page');
       die();
   }
+
+    if(isset($_POST['startWork']))
+    {
+        $hours = 0;
+        if(isset($_POST['hours'])) $hours = $_POST['hours'];
+        Home::StartWork($hours);
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,6 +43,20 @@
 
         .main-choices{
           width: 100%;
+        }
+
+        .work-card-square.mdl-card {
+            width: 320px;
+            height: 520px;
+        }
+        .work-card-square > .mdl-card__title {
+            color: #fff;
+            background:
+            url('http://1mcash.com/images/parttimejob.jpg') bottom right 15% no-repeat #46B6AC;
+        }
+
+        #currentlyWorkingBlock > img{
+            border: 1px solid #4CAF50;
         }
     </style>
 </head>
@@ -76,7 +97,7 @@
                             <div class="mdl-cell mdl-cell--1-col"></div>
                             <div class="mdl-cell mdl-cell--3-col">
                               <img src="" class="profile-image" id="profileIMG">   
-                              <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="change-photo-btn"><i class="material-icons">photo</i></button>
+                              <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="change-photo-btn" onclick="goTo('settings');"><i class="material-icons">photo</i></button>
                               <div class="mdl-tooltip" for="change-photo-btn">Změnit profilový obrázek</div>
                             </div>
                             <div class="mdl-cell mdl-cell--7-col">
@@ -135,7 +156,7 @@
                 </section>
                 <section class="mdl-layout__tab-panel" id="fixed-tab-2">
                     <div class="page-content">
-                      <!-- TAB 2 -->
+                      <!-- TAB 2: ŠKOLA -->
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--1-col"></div>
                             <div class="mdl-cell mdl-cell--10-col">
@@ -148,7 +169,42 @@
                 </section>
                 <section class="mdl-layout__tab-panel" id="fixed-tab-3">
                     <div class="page-content">
-                        <!-- Your content goes here -->
+                        <!-- TAB 3: MĚSTO -->
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--1-col"></div>
+                            <div class="mdl-cell mdl-cell--10-col">
+                              <!-- Center -->                                
+                                <div class="work-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">Brigáda</h2>
+                                </div>
+                                
+                                <div class="mdl-card__supporting-text">
+                                    Brigádou získáte peníze. Pracovat můžete až
+                                    8 hodin. Práce má negativní dopad na váš
+                                    zdravý rozum.<br><br>
+                                    Právě pracují:<br>
+                                    <div id="currentlyWorkingBlock">
+                                    <!--<img src="http://www.focusit.ca/wp-content/uploads/Multimedia-Programmer-768x768.jpg" width="50" height="50" id="usernameWork">
+                                    <div class="mdl-tooltip" for="usernameWork">My Name</div>-->
+                                    Nikdo zrovna nepracuje...
+                                    </div>
+                                    <br><br>
+                                    Jak dlouho chcete pracovat?<br>
+                                    <form action="" method="POST">
+                                    <span id="work-slider-label">1</span> h. <br>
+                                    <input name="hours" class="mdl-slider mdl-js-slider" type="range"
+                                            min="1" max="8" value="0" tabindex="0" id="work-slider">
+                                    <br><span id="work-ticker"></span>
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <input id="work-button" name="startWork" type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" value="Začít Práci">
+                                    </form>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col"></div>
+                        </div>
                     </div>
                 </section>
                 <!-- SNACKBAR -->
@@ -164,6 +220,7 @@
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
         <script>
           var username = "";
+          var work = {working: false}
 
           function ShowSnackbar(message) {
               var snackbarContainer = document.querySelector('#demo-toast-example');
@@ -191,6 +248,63 @@
             $('#scval').html(sc + ' CZK / 100%');
           }
 
+          function SetPlayerWorkDetails(t){
+              work.working = true;
+              work.t = t;
+          }
+
+          var goalUTC;
+          var timer;
+
+          function SetWorkMode(goalDate){
+              $("#work-slider").prop('disabled', true);
+              $("#work-button").val("Přestat pracovat");
+              $("#work-ticker").text(goalDate);  
+              goalUTC = new Date(goalDate);
+              timer = setInterval(workTick, 1000);
+          }
+
+          function workTick(){
+            var now = new Date();
+            var nowUTC = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),  now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
+
+            var difference = goalUTC.getTime() - nowUTC.getTime();
+
+            if (difference <= 0) {
+
+                clearInterval(timer);
+                $("#work-ticker").text("");
+                goTo('home');
+            
+            } else {
+                
+                var seconds = Math.floor(difference / 1000);
+                var minutes = Math.floor(seconds / 60);
+                var hours = Math.floor(minutes / 60);
+                var days = Math.floor(hours / 24);
+
+                hours %= 24;
+                minutes %= 60;
+                seconds %= 60;
+
+                $("#work-ticker").text("Vaše práce skončí za " + hours + "hod. " + minutes + "min. " + seconds + "sec.");
+          }
+        }
+
+            $('#work-slider').on('input', function () {
+                $("#work-slider-label").text($('#work-slider').val())
+            });
+
+            var playersAreWorking = false;
+
+            function AddWorkingPlayer(avatar, username){
+                if(!playersAreWorking)
+                {
+                    playersAreWorking = true;
+                    $("#currentlyWorkingBlock").empty();
+                }
+                $("#currentlyWorkingBlock").append('<img src="' + avatar + '" width="50" height="50" id="' + username + 'Work"><div class="mdl-tooltip" for="' + username + 'Work">' + username + '</div>');
+            }
         </script>
 </body>
 
