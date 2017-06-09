@@ -300,9 +300,7 @@
                                 </div>
                                 </div>
 
-                                
-
-                                <div class="float-card mdl-card mdl-shadow--2dp">
+                                <!-- <div class="float-card mdl-card mdl-shadow--2dp">
                                     <div class="mdl-card__title mdl-card--expand">
                                         <h2 class="mdl-card__title-text">ZZZZZZZ</h2>
                                     </div>
@@ -312,22 +310,7 @@
                                     <div class="mdl-card__actions mdl-card--border">
                                         YYYYYY
                                     </div>
-                                </div>
-
-                                <div class="float-card mdl-card mdl-shadow--2dp">
-                                    <div class="mdl-card__title mdl-card--expand">
-                                        <h2 class="mdl-card__title-text">ZZZZZZZ</h2>
-                                    </div>
-                                    <div class="mdl-card__supporting-text">
-                                        XXXXXX
-                                    </div>
-                                    <div class="mdl-card__actions mdl-card--border">
-                                        YYYYYY
-                                        
-                                    </div>
-                                </div>
-
-
+                                </div> -->
 
                             </div>
                             <div class="mdl-cell mdl-cell--3-col">
@@ -337,20 +320,7 @@
                                     </div>
                                     <div class="mdl-card__actions mdl-card--border">
                                         <ul class="demo-list-two mdl-list" id="richBoard">
-                                            <!--<li class="mdl-list__item mdl-list__item--two-line">
-                                                <span class="mdl-list__item-primary-content">
-                                                <img src="http://i.imgur.com/uM5MJB7.jpg" class="mdl-list__item-avatar">
-                                                <span>Spelos</span>
-                                                <span class="mdl-list__item-sub-title">30035 CZK</span>
-                                                </span>
-                                            </li>
-                                            <li class="mdl-list__item mdl-list__item--two-line">
-                                                <span class="mdl-list__item-primary-content">
-                                                <img src="http://static1.fjcdn.com/comments/The+bannered+mare+no+you+think+he+wants+to+_9f620e3f87c1e4f3a77c732e9b251970.jpg" class="mdl-list__item-avatar">
-                                                <span>Dan</span>
-                                                <span class="mdl-list__item-sub-title">650 CZK</span>
-                                                </span>
-                                            </li>-->
+
                                         </ul>
                                     </div>
                                 </div>
