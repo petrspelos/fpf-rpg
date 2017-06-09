@@ -85,9 +85,12 @@
                     // Add reward
                     $rewardMult = self::query("SELECT hours_worked FROM work_timers WHERE user_id=:ID", array(':ID'=>$user_id))[0]['hours_worked'];
                     $reward = $rewardMult * WORK_REWARD;
-                    $currentMoney = self::query("SELECT money FROM students WHERE user_id=:ID", array(':ID'=>$user_id))[0]['money'];
+                    $userQuery = self::query("SELECT money, sanity FROM students WHERE user_id=:ID", array(':ID'=>$user_id));
+                    $currentMoney = $userQuery[0]['money'];
+                    $currentSanity = $userQuery[0]['sanity'];
                     $updatedMon = $currentMoney + $reward;
-                    self::query("UPDATE students SET money=:czk WHERE user_id=:user_id", array(':user_id'=>$user_id, ':czk'=>$updatedMon));
+                    $updatedSan = self::clamp($currentSanity - (WORK_SANITY_DAMAGE * $rewardMult), 0, 100);
+                    self::query("UPDATE students SET money=:czk, sanity=:snt WHERE user_id=:user_id", array(':user_id'=>$user_id, ':czk'=>$updatedMon, ':snt'=>$updatedSan));
                     self::query('DELETE FROM work_timers WHERE user_id=:userid', array(':userid'=>$user_id));
                     echo "<script>window.location = 'home';</script>";
                 }
@@ -127,6 +130,10 @@
                 echo "<script>window.location = 'home';</script>";
                 die("Please wait...");
             }
+        }
+
+        public static function clamp($current, $min, $max) {
+            return max($min, min($max, $current));
         }
     }
 
