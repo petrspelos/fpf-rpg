@@ -336,8 +336,8 @@
                                         <h2 class="mdl-card__title-text">Nejbohatší studenti</h2>
                                     </div>
                                     <div class="mdl-card__actions mdl-card--border">
-                                        <ul class="demo-list-two mdl-list">
-                                            <li class="mdl-list__item mdl-list__item--two-line">
+                                        <ul class="demo-list-two mdl-list" id="richBoard">
+                                            <!--<li class="mdl-list__item mdl-list__item--two-line">
                                                 <span class="mdl-list__item-primary-content">
                                                 <img src="http://i.imgur.com/uM5MJB7.jpg" class="mdl-list__item-avatar">
                                                 <span>Spelos</span>
@@ -350,7 +350,7 @@
                                                 <span>Dan</span>
                                                 <span class="mdl-list__item-sub-title">650 CZK</span>
                                                 </span>
-                                            </li>
+                                            </li>-->
                                         </ul>
                                     </div>
                                 </div>
@@ -456,6 +456,10 @@
                     $("#currentlyWorkingBlock").empty();
                 }
                 $("#currentlyWorkingBlock").append('<img src="' + avatar + '" width="50" height="50" id="' + username + 'Work"><div class="mdl-tooltip" for="' + username + 'Work">' + username + '</div>');
+            }
+
+            function AddRichPlayer(richUsername, richAvatar, richMoney){
+                $('#richBoard').append('<li class="mdl-list__item mdl-list__item--two-line"><span class="mdl-list__item-primary-content"><img src="' + richAvatar + '" class="mdl-list__item-avatar"><span>' + richUsername + '</span><span class="mdl-list__item-sub-title">' + richMoney + ' CZK</span></span></li>');
             }
         </script>
 </body>

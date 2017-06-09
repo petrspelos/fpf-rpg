@@ -11,6 +11,7 @@
 - [ ] Každý předmět má 10 "Questů"
 - [ ] Výběr oboru
 - [ ] Práce ubírá zdravý rozum (minimální hodnota 0%, maximální 100%)
+- [x] Nejbohatší studenti
 - [x] Možnost pracovat
 - [x] Herní informace o uživateli
 - [x] Migrace na zabezpečený hosting

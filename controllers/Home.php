@@ -40,6 +40,18 @@
                 $a = self::query("SELECT avatar FROM students WHERE user_id=:ID", array(':ID'=>$uID))[0]['avatar'];
                 echo "<script>AddWorkingPlayer('$a', '$u');</script>";
             }
+
+
+            // Check For richest players
+            $richPlayers = self::query("SELECT money, user_id, avatar FROM students ORDER BY money DESC LIMIT 3", array());
+            foreach($richPlayers as $richPlayer)
+            {
+                $rpid = $richPlayer['user_id'];
+                $ra = $richPlayer['avatar'];
+                $rpu = self::query("SELECT username FROM users WHERE ID=:ID", array(':ID'=>$rpid))[0]['username'];
+                $rpm = $richPlayer['money'];
+                echo "<script>AddRichPlayer('$rpu', '$ra', $rpm);</script>";
+            }
         }
 
         public static function LoadUserGame(){
