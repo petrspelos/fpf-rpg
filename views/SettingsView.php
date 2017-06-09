@@ -77,9 +77,11 @@
             </header>
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Menu</span>
+                <hr>
                 <button class="mdl-button mdl-js-button " onclick="goTo('home');">
                     Domů
                 </button>
+                <hr>
                 <button class="mdl-button mdl-js-button " onclick="goTo('logout');">
                     Odhlásit se
                 </button>

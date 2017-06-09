@@ -43,6 +43,7 @@ if((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
       ===========================================================================
     -->
     <body>
+    
         <?php echo "<script>var gameVersion = '".GAME_VERSION."';</script>";?>
 
 

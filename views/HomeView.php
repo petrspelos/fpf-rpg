@@ -55,6 +55,11 @@
             url('http://1mcash.com/images/parttimejob.jpg') bottom right 15% no-repeat #46B6AC;
         }
 
+        .float-card{
+            float: left;
+            margin: 0px 0px 20px 20px;
+        }
+
         #currentlyWorkingBlock > img{
             border: 1px solid #4CAF50;
         }
@@ -85,6 +90,11 @@
             </header>
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Menu</span>
+                <hr>
+                <button class="mdl-button mdl-js-button " onclick="goTo('settings');">
+                    Nastavení
+                </button>
+                <hr>
                 <button class="mdl-button mdl-js-button " onclick="goTo('logout');">
                     Odhlásit se
                 </button>
@@ -161,7 +171,95 @@
                             <div class="mdl-cell mdl-cell--1-col"></div>
                             <div class="mdl-cell mdl-cell--10-col">
                               <!-- Center -->                                
+                              <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp main-choices">
+                                <thead>
+                                    <tr>
+                                    <th class="mdl-data-table__cell--non-numeric">PŘEDMĚT</th>
+                                    <th>Absence</th>
+                                    <th>Akce</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <span class="mdl-chip mdl-chip--contact">
+                                            <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">A</span>
+                                            <span class="mdl-chip__text">Poezie</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="mdl-chip mdl-color--green"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--red"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
 
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                    </td>
+                                    <td>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                            Pokračovat
+                                        </button>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <span class="mdl-chip mdl-chip--contact">
+                                            <span class="mdl-chip__contact mdl-color--grey mdl-color-text--white">?</span>
+                                            <span class="mdl-chip__text">???</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                    </td>
+                                    <td>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>
+                                            Pokračovat
+                                        </button>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <span class="mdl-chip mdl-chip--contact">
+                                            <span class="mdl-chip__contact mdl-color--grey mdl-color-text--white">?</span>
+                                            <span class="mdl-chip__text">???</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                    </td>
+                                    <td>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>
+                                            Pokračovat
+                                        </button>
+                                    </td>
+                                    </tr>
+                                </tbody>
+                                </table>
                             </div>
                             <div class="mdl-cell mdl-cell--1-col"></div>
                         </div>
@@ -172,13 +270,12 @@
                         <!-- TAB 3: MĚSTO -->
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--1-col"></div>
-                            <div class="mdl-cell mdl-cell--10-col">
+                            <div class="mdl-cell mdl-cell--7-col">
                               <!-- Center -->                                
-                                <div class="work-card-square mdl-card mdl-shadow--2dp">
+                                <div class="work-card-square mdl-card mdl-shadow--2dp float-card">
                                 <div class="mdl-card__title mdl-card--expand">
                                     <h2 class="mdl-card__title-text">Brigáda</h2>
                                 </div>
-                                
                                 <div class="mdl-card__supporting-text">
                                     Brigádou získáte peníze. Pracovat můžete až
                                     8 hodin. Práce má negativní dopad na váš
@@ -201,6 +298,61 @@
                                     <input id="work-button" name="startWork" type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" value="Začít Práci">
                                     </form>
                                 </div>
+                                </div>
+
+                                
+
+                                <div class="float-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text">ZZZZZZZ</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        XXXXXX
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        YYYYYY
+                                    </div>
+                                </div>
+
+                                <div class="float-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text">ZZZZZZZ</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        XXXXXX
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        YYYYYY
+                                        
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="mdl-cell mdl-cell--3-col">
+                                <div class="float-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text">Nejbohatší studenti</h2>
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <ul class="demo-list-two mdl-list">
+                                            <li class="mdl-list__item mdl-list__item--two-line">
+                                                <span class="mdl-list__item-primary-content">
+                                                <img src="http://i.imgur.com/uM5MJB7.jpg" class="mdl-list__item-avatar">
+                                                <span>Spelos</span>
+                                                <span class="mdl-list__item-sub-title">30035 CZK</span>
+                                                </span>
+                                            </li>
+                                            <li class="mdl-list__item mdl-list__item--two-line">
+                                                <span class="mdl-list__item-primary-content">
+                                                <img src="http://static1.fjcdn.com/comments/The+bannered+mare+no+you+think+he+wants+to+_9f620e3f87c1e4f3a77c732e9b251970.jpg" class="mdl-list__item-avatar">
+                                                <span>Dan</span>
+                                                <span class="mdl-list__item-sub-title">650 CZK</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--1-col"></div>
