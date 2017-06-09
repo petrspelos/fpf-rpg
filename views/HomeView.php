@@ -142,7 +142,7 @@
                                   <tr>
                                     <td class="mdl-data-table__cell--non-numeric" id="health-label">Zdraví / Život</td>
                                     <div class="mdl-tooltip" for="health-label">
-                                    ...
+                                    Zdraví je poškozováno školou. POZOR! Pokud zdraví klesne na 0%, hra skončila a Váš účet se nenávratně přesune na hřbitov.
                                     </div>
                                     <td id="hval">0%</td>
                                     <td id="hcval">0 CZK / 0%</td>
@@ -151,7 +151,7 @@
                                   <tr>
                                     <td class="mdl-data-table__cell--non-numeric" id="sanity-label">Zdravý rozum</td>
                                     <div class="mdl-tooltip" for="sanity-label">
-                                    ...
+                                    Zdravý rozum Vás chrání před poškozením zdraví ze školy. Nízký zdravý rozum znamená, že budou přednášky ve škole působit větší poškození zdraví. Zdravý rozum klesá prací.
                                     </div>
                                     <td id="sval">0%</td>
                                     <td id="scval">0 CZK / 0%</td>
