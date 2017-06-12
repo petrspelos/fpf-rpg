@@ -183,37 +183,12 @@
                                     <tr>
                                     <td class="mdl-data-table__cell--non-numeric">
                                         <span class="mdl-chip mdl-chip--contact">
-                                            <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">A</span>
-                                            <span class="mdl-chip__text">Poezie</span>
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span class="mdl-chip mdl-color--green"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--red"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                    </td>
-                                    <td>
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                                            Pokračovat
-                                        </button>
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                    <td class="mdl-data-table__cell--non-numeric">
-                                        <span class="mdl-chip mdl-chip--contact">
                                             <span class="mdl-chip__contact mdl-color--grey mdl-color-text--white">?</span>
                                             <span class="mdl-chip__text">???</span>
                                         </span>
                                     </td>
                                     <td>
+
                                         <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
                                         <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
                                         <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
@@ -225,32 +200,9 @@
                                         <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
                                         <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
                                         <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                    </td>
-                                    <td>
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>
-                                            Pokračovat
-                                        </button>
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                    <td class="mdl-data-table__cell--non-numeric">
-                                        <span class="mdl-chip mdl-chip--contact">
-                                            <span class="mdl-chip__contact mdl-color--grey mdl-color-text--white">?</span>
-                                            <span class="mdl-chip__text">???</span>
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
 
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
-                                        <span class="mdl-chip mdl-color--grey"><span class="mdl-chip__text"></span></span>
+                                        <span><br>Tato funkce zatím nebyla implementována. (a pravděpodobně ani nebude)<br>Většina funkcí je pod záložkou MĚSTO.</span>
+
                                     </td>
                                     <td>
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>

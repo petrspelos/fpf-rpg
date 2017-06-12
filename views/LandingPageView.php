@@ -70,103 +70,38 @@ if((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
                                     NAVIGATION BUTTONS
                       -->
                       <div class="task-list">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="goTo('login');">
-                        Příhlásit se
-                        </button>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="goTo('create-account');">
-                        Registrovat se
-                        </button>
+                        
                       </div>
-                                        <!--
-                                    TASK LIST
-                      -->
-                      <ul class="task-list mdl-list">
-                          <!-- TASK 5 -->
-                          <li class="mdl-list__item mdl-list__item--three-line">
-                              <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-avatar">code</i>
-                            <span>Come on! Get in!</span>
-                              <span class="mdl-list__item-text-body">
-                              Přihlašování, přihlašovací tokeny, varování před cookies.
-                            </span>
-                              </span>
-                              <span class="mdl-list__item-secondary-content">
-                            
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" disabled>
-                            </label>
-                          </span>
-                          </li>
-                          <!-- TASK END -->
-                          <!-- TASK 4 -->
-                          <li class="mdl-list__item mdl-list__item--three-line">
-                              <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-avatar">code</i>
-                            <span>Meat! Meat! MEAT! MORE PIG! <b>MORE PIG!</b></span>
-                              <span class="mdl-list__item-text-body">
-                              Registrace + CAPTCHA
-                            </span>
-                              </span>
-                              <span class="mdl-list__item-secondary-content">
-                            
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
-                            </label>
-                          </span>
-                          </li>
-                          <!-- TASK END -->
-                          <!-- TASK 3 -->
-                          <li class="mdl-list__item mdl-list__item--three-line">
-                              <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-avatar">code</i>
-                            <span>One page to rule them all</span>
-                              <span class="mdl-list__item-text-body">
-                              Připravit MVC (model, view, controller) architekturu pro jednotlivé stránky.
-                            </span>
-                              </span>
-                              <span class="mdl-list__item-secondary-content">
-                            
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
-                            </label>
-                          </span>
-                          </li>
-                          <!-- TASK END -->
-                          <!-- TASK 2 -->
-                          <li class="mdl-list__item mdl-list__item--three-line">
-                              <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-avatar">code</i>
-                            <span>Welcome to the game</span>
-                              <span class="mdl-list__item-text-body">
-                              Nastavit připojení k databázi, vytvořit abstrakci pro databázové příkazy.
-                            </span>
-                              </span>
-                              <span class="mdl-list__item-secondary-content">
-                            
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
-                            </label>
-                          </span>
-                          </li>
-                          <!-- TASK END -->
-                          <!-- TASK 1 -->
-                          <li class="mdl-list__item mdl-list__item--three-line">
-                              <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-avatar">code</i>
-                            <span>První krok</span>
-                              <span class="mdl-list__item-text-body">
-                              Propojení s FTP, Git repozitář, nahrání index stránky.
-                            </span>
-                              </span>
-                              <span class="mdl-list__item-secondary-content">
-                            
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-list__item-secondary-action" for="checkbox-1">
-                              <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked disabled>
-                            </label>
-                          </span>
-                          </li>
-                          <!-- TASK END -->
-                      </ul>
+
+                        <style>
+                        .demo-card-square.mdl-card {
+                          width: 100%;
+                          height: 80%;
+                        }
+                        .demo-card-square > .mdl-card__title {
+                          color: #fff;
+                          background:
+                            url('http://i.imgur.com/0m61z44.png') top left 50% no-repeat #46B6AC;
+                          border: 1px solid rgba(0,0,0,0.2);
+                        }
+                        </style>
+
+                        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                          <div class="mdl-card__title mdl-card--expand">
+                            <h2 class="mdl-card__title-text">FPF - RPG</h2>
+                          </div>
+                          <div class="mdl-card__supporting-text">
+                            Staňte se studentem či studentkou vysoké školy ve strhující RPG hře FPF-RPG.
+                          </div>
+                          <div class="mdl-card__actions mdl-card--border">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="goTo('login');">
+                            Příhlásit se
+                            </button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="goTo('create-account');">
+                            Registrovat se
+                            </button>
+                          </div>
+                        </div>
                       
                       <!--
                                   SNACKBAR SETUP
