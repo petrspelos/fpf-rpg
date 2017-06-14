@@ -44,7 +44,6 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-red.min.css">
 
     <style>
-    /* SUM CSS, MŮŽEŠ IGNOROVAT, MŮŽEŠ PŘIPISOVAT, YOUR CHOICE */
         body {
             background-color: #eee;
             padding: 0px;
@@ -79,9 +78,11 @@
             </header>
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Menu</span>
+                <hr>
                 <button class="mdl-button mdl-js-button " onClick="goTo('home');">
                     Domů
                 </button>
+                <hr>
                 <button class="mdl-button mdl-js-button " onClick="goTo('logout');">
                     Odhlásit se
                 </button>

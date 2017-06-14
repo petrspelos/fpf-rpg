@@ -81,7 +81,8 @@ if((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
                         .demo-card-square > .mdl-card__title {
                           color: #fff;
                           background:
-                            url('http://i.imgur.com/0m61z44.png') top left 50% no-repeat #46B6AC;
+                            url('https://wustl.edu/wp-content/uploads/2014/09/reading.jpg') top left no-repeat #46B6AC;
+                          background-size: cover;
                           border: 1px solid rgba(0,0,0,0.2);
                         }
                         </style>
