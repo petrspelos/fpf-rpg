@@ -1,7 +1,7 @@
 <?php
 
-    Route::set('404', function(){
-        ERR404::CreateView('404View');
+    Route::set('error404', function(){
+        ERR404::CreateView('error404View');
     });
     
     Route::set('index.php', function(){

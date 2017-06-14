@@ -29,7 +29,7 @@
             }
             if(!$valid)
             {
-                header("Location: 404");
+                header("Location: error404");
                 die();
             }
         }
