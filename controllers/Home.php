@@ -65,6 +65,7 @@
             $sc = $cfg[0]['sanity_cost'];
             $hc = $cfg[0]['health_cost'];
             echo "<script>LoadGameValues($c,$m,$h,$s,'$a',$sc,$hc);</script>";
+            echo "<script>LoadingFinished();</script>";
         }
 
         public static function CheckPlayerWorkStatus(){
@@ -134,6 +135,19 @@
 
         public static function clamp($current, $min, $max) {
             return max($min, min($max, $current));
+        }
+
+        public static function BuySanity(){
+            // check if the player has enough money
+            $user_id = self::isLoggedIn();
+            $user_money =  self::query("SELECT money FROM students WHERE user_id=:ID", array(":ID"=>$user_id))[0]['money'];
+            $sanity_cost = self::query("SELECT sanity_cost FROM game_config WHERE ID=1")[0]['sanity_cost'];
+            if($user_money >= $sanity_cost)
+            {
+                $user_money -= $sanity_cost;
+                $new_sanity = 100;
+                self::query("UPDATE students SET money=:czk, sanity=:snt WHERE user_id=:user_id", array(':user_id'=>$user_id, ':czk'=>$user_money, ':snt'=>$new_sanity));
+            }
         }
     }
 

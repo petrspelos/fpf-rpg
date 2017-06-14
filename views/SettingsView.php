@@ -72,7 +72,7 @@
                 </div>
                 <!-- Tabs -->
                 <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                    <a href="#fixed-tab-1" class="mdl-layout__tab is-active" id="usernameTabTitle">Nastavení</a>
+                    <a href="home" class="mdl-layout__tab is-active" id="usernameTabTitle">Nastavení</a>
                 </div>
             </header>
             <div class="mdl-layout__drawer">

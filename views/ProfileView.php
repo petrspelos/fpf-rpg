@@ -155,10 +155,6 @@
 </div>
   </div>
 </div>
-
-
-				<div id="printContent">
-                </div>
             </main>
         </div>
 
