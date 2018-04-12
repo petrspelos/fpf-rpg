@@ -35,6 +35,7 @@
                         self::query('INSERT INTO login_tokens VALUES (null, :token, :user_id)', array(':token'=>sha1($token), ':user_id'=>$userid));
                         self::query('DELETE FROM login_tokens WHERE token=:token', array(':token'=>sha1($_COOKIE['FPFRPG'])));
 
+                        echo "COOKIE SETTING HERE";
                         setcookie("FPFRPG", $token, time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);
                         setcookie("FPFRPG_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
 
@@ -43,7 +44,6 @@
                     
                 }
             }
-
             return false;
         }
     }

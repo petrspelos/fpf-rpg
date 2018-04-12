@@ -27,7 +27,7 @@
             else
             {
                 // User doesn't have a students, creating a new one
-                self::query("INSERT INTO students VALUES (null, 'http://beachbutlerz.com/wp-content/uploads/2015/02/placeholder-woman-220x220.png', '0', '100', '100', '80', '0', :user_id)", array(':user_id'=>$user_id));
+                self::query("INSERT INTO students VALUES (null, '".DEFAULT_AVATAR."', '0', '100', '100', '80', '0', :user_id)", array(':user_id'=>$user_id));
                 self::LoadUserGame();
             }
 

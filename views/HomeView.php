@@ -1,7 +1,7 @@
-<?php
+﻿<?php
   if(!self::isLoggedIn())
   {
-      header('Location: landing-page');
+      //header('Location: landing-page');
       die();
   }
 
@@ -98,7 +98,6 @@
                                       BODY
       ===========================================================================
     -->
-
     <body>
         <?php echo "<script>var gameVersion = '".GAME_VERSION."';</script>";?>
             <!-- Simple header with fixed tabs. -->

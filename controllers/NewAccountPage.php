@@ -34,12 +34,12 @@
                 }
                 else
                 {
-                    $mistakes[] = "Uživatel $username již existuje.";
+                    $mistakes[] = "The $username username is already taken.";
                 }
             }
             else
             {
-                $mistakes[] = "Uživatelské jméno musí být mezi 3 a 32 znaky a může obsahovat pouze písmena anglické abecedy a čísla.";
+                $mistakes[] = "Your username must be between 3 and 32 characters in length and may contain only numbers and letter of the English alphabet.";
             }
 
             // Check if passwords match
@@ -49,7 +49,7 @@
             }
             else
             {
-                $mistakes[] = "Vámi zadaná hesla se neshodují.";
+                $mistakes[] = "Your passwords don\'t match.";
             }
 
             if(!ISDEBUG)
@@ -63,7 +63,7 @@
                 }
                 else
                 {
-                    $mistakes[] = "CAPTCHA nebyl úspěšně vyplněn.";
+                    $mistakes[] = "The CAPTCHA check failed. You\'re not a robot, are you?";
                 }
             }
             else
@@ -100,7 +100,7 @@
         public static function post_captcha($user_response) {
             $fields_string = '';
             $fields = array(
-                'secret' => '6LcLoiEUAAAAAO3FiBZlFVEpA4ZWS2VE8ek03ujr',
+                'secret' => CAPTCHA_SECRET,
                 'response' => $user_response
             );
             foreach($fields as $key=>$value)

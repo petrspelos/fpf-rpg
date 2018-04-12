@@ -1,4 +1,5 @@
 <?php
+  ob_start();
   include_once('config.php');
   require_once('routes.php');
 
